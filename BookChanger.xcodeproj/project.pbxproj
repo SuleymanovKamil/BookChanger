@@ -22,6 +22,10 @@
 		6BB644D02605143400BEB182 /* ChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB644CF2605143400BEB182 /* ChangeView.swift */; };
 		6BB644D42605227500BEB182 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB644D32605227500BEB182 /* Store.swift */; };
 		6BB644D82605361400BEB182 /* AddBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB644D72605361400BEB182 /* AddBook.swift */; };
+		6BB644DF2605FD8600BEB182 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB644DE2605FD8600BEB182 /* ImagePicker.swift */; };
+		6BB644F6260600C200BEB182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BB644F8260600C200BEB182 /* Localizable.strings */; };
+		6BB645042606A50200BEB182 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB645032606A50200BEB182 /* Extension.swift */; };
+		6BB645072606A8E100BEB182 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB645062606A8E100BEB182 /* BookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,11 @@
 		6BB644CF2605143400BEB182 /* ChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeView.swift; sourceTree = "<group>"; };
 		6BB644D32605227500BEB182 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		6BB644D72605361400BEB182 /* AddBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBook.swift; sourceTree = "<group>"; };
+		6BB644DE2605FD8600BEB182 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		6BB644FE260601ED00BEB182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6BB645002606023B00BEB182 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6BB645032606A50200BEB182 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		6BB645062606A8E100BEB182 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +112,7 @@
 				6BB644CC2605121E00BEB182 /* AllBooks.swift */,
 				6BB644CF2605143400BEB182 /* ChangeView.swift */,
 				6BB644D72605361400BEB182 /* AddBook.swift */,
+				6BB645062606A8E100BEB182 /* BookView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +139,9 @@
 			children = (
 				6BB644C42604D94500BEB182 /* Constants.swift */,
 				6BB644C12604D77900BEB182 /* login.gif */,
+				6BB644DE2605FD8600BEB182 /* ImagePicker.swift */,
+				6BB644F8260600C200BEB182 /* Localizable.strings */,
+				6BB645032606A50200BEB182 /* Extension.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 6BB644832604C1BC00BEB182;
 			packageReferences = (
@@ -197,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB644972604C1BE00BEB182 /* Preview Assets.xcassets in Resources */,
+				6BB644F6260600C200BEB182 /* Localizable.strings in Resources */,
 				6BB644C22604D77900BEB182 /* login.gif in Resources */,
 				6BB644942604C1BE00BEB182 /* Assets.xcassets in Resources */,
 			);
@@ -214,16 +229,31 @@
 				6BB644A82604C8F600BEB182 /* User.swift in Sources */,
 				6BB644C92604DC0000BEB182 /* MyBooks.swift in Sources */,
 				6BB644922604C1BC00BEB182 /* ContentView.swift in Sources */,
+				6BB645072606A8E100BEB182 /* BookView.swift in Sources */,
 				6BB644D02605143400BEB182 /* ChangeView.swift in Sources */,
 				6BB644902604C1BC00BEB182 /* BookChangerApp.swift in Sources */,
 				6BB644A42604C8A900BEB182 /* Book.swift in Sources */,
 				6BB644AB2604C9BA00BEB182 /* Authorization.swift in Sources */,
+				6BB645042606A50200BEB182 /* Extension.swift in Sources */,
+				6BB644DF2605FD8600BEB182 /* ImagePicker.swift in Sources */,
 				6BB644C52604D94500BEB182 /* Constants.swift in Sources */,
 				6BB644D82605361400BEB182 /* AddBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6BB644F8260600C200BEB182 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BB644FE260601ED00BEB182 /* en */,
+				6BB645002606023B00BEB182 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6BB644992604C1BE00BEB182 /* Debug */ = {

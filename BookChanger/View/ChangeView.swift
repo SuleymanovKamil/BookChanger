@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ChangeView: View {
-    @State var conditinal = 4
+    @StateObject var store = Store()
+    
     var body: some View {
         NavigationView {
             
@@ -54,37 +55,41 @@ struct ChangeView: View {
                     .bold()
                     .padding(.top)
                 
-                ScrollView {
-                    HStack {
-                            Image("book")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 120)
-                            
-                        VStack (alignment: .leading, spacing: 5){
-                                Text("Дневник Гуантанамо")
-                                    .font(.title2)
-                                    .bold()
-                            Text("Мохаммед ульд Слахи")
-                                .font(.headline)
-                                Text("Жанр: Биография")
-                                    .font(.headline)
-                                HStack {
-                                    Text("Состояние: ")
-                                        .font(.headline)
-                                    
-                                    ForEach(0..<5) {number in
-                                        Image(systemName: number <= conditinal ? "star.fill" : "star")
-                                            .renderingMode(.original)
-                                            .onTapGesture {
-                                                conditinal = number
-                                            }
+                VStack {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(store.userBooks.indices, id: \.self) { index in
+                            ZStack {
+                                ZStack {
+                                    HStack {
+                                        Spacer()
+                                        Button(action: {
+                                                store.userBooks.remove(at: index)
+                                        }
+                                               , label: {
+                                            Image(systemName: "trash.circle.fill")
+                                                .resizable()
+                                                .renderingMode(.original)
+                                                .frame(width: 40, height: 40)
+                                        })
                                     }
+                                    .padding(.trailing, 20)
                                 }
-                                
+                                .onTapGesture {
+                                        store.userBooks.remove(at: index)
+                                }
+
+                                BookView(book: store.userBooks[index])
+                                    
+                                    
                             }
-                        Spacer()
+                
+                        }
                     }
+                    .sheet(isPresented: $store.addBookPresent, content: {
+                        AddBook()
+                    })
+
+                    Spacer()
                 }
                 
                 Spacer()
@@ -105,5 +110,6 @@ struct ChangeView: View {
 struct ChangeView_Previews: PreviewProvider {
     static var previews: some View {
         ChangeView()
+            .environmentObject(Store())
     }
 }

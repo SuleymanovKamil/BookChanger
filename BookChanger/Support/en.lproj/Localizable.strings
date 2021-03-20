@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  laribaShop
+
+  Created by Камиль  Сулейманов on 04.12.2020.
+  
+*/
+
+
+"Жанр: " = "Genre: ";
+"Продажа:" = "Sale:";
+"Продажа" = "Sale";
+"Состояние: " = "Condition: ";
+"Обмен:" = "Swap:"; 
+"Обмен" = "Swap";
+"Цена" = "Cost";
+//add new book
+"Добавить новую книгу" = "Add a new book";
+"Фотография книги" = "Book image";
+"Добавить фото" = "Add a photo";
+"Название" = "Title";
+"Автор" = "Author";
+"Жанр" = "Genre";
+"Добавить" = "Add a book";
+"Мои книги" = "My books";
